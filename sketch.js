@@ -84,7 +84,6 @@ function draw() {
     ground.display();
     ground1.display();
     ground2.display();
-    drawSprites();
     box1.Score();
     box2.Score();
     box3.Score();
@@ -100,9 +99,10 @@ function draw() {
     box13.Score();
     box14.Score();
     box15.Score();
-  textSize(25)
-  fill(255)
-  text("Score:"+score,700,40)  
+  textSize(25);
+  fill(255);
+  text("Score:"+score,700,40) ; 
+  drawSprites();
 }
 
 function mouseDragged(){
@@ -133,5 +133,5 @@ async function getTime(){
       img=" background.jpg ";
     }
   backgroundImg = loadImage(img);
-   console.log(backgroundImg);
+   //console.log(backgroundImg);
 };
