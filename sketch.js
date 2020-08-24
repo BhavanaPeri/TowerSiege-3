@@ -52,7 +52,7 @@ function setup() {
 
   slingShot = new Slingshot(hexagon.body,{x:70,y:100});
 
-Engine.run(engine);
+//Engine.run(engine);
 
 }
 
@@ -62,47 +62,47 @@ function draw() {
   if(backgroundImg)
   background(backgroundImg);
   //noStroke();
- 
+  textSize(25)
+  fill(255)
+  text("Score:"+score,700,40)  
   Engine.update(engine);
     box1.display();
+    box1.Score();
     box2.display();
+    box2.Score();
     box3.display();
+    box3.Score();
     box4.display();
+    box4.Score();
     box5.display();
+    box5.Score();
     box6.display();
+    box6.Score();
     box7.display();
+    box7.Score();
     box8.display();
+    box8.Score();
     box9.display();
+    box9.Score();
     box10.display();
+    box10.Score();
     box11.display();
+    box11.Score();
     box12.display();
+    box12.Score();
     box13.display();
+    box13.Score();
     box14.display();
+    box14.Score();
     box15.display();
+    box15.Score();
   slingShot.display();
   hexagon.display();
     ground.display();
     ground1.display();
     ground2.display();
-    box1.Score();
-    box2.Score();
-    box3.Score();
-    box4.Score();
-    box5.Score();
-    box6.Score();
-    box7.Score();
-    box8.Score();
-    box9.Score();
-    box10.Score();
-    box11.Score();
-    box12.Score();
-    box13.Score();
-    box14.Score();
-    box15.Score();
-  textSize(25);
-  fill(255);
-  text("Score:"+score,700,40) ; 
-  drawSprites();
+//console.log(score);
+ drawSprites();
 }
 
 function mouseDragged(){
@@ -133,5 +133,5 @@ async function getTime(){
       img=" background.jpg ";
     }
   backgroundImg = loadImage(img);
-   //console.log(backgroundImg);
+   console.log(backgroundImg);
 };
